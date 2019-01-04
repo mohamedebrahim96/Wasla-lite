@@ -24,7 +24,6 @@
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
                 android:shadowColor="@color/white"
                 android:shadowDx="0.0"
                 android:shadowDy="0.0"
@@ -49,7 +48,9 @@
 
     <SearchView
             android:id="@+id/searchView"
-            android:layout_width="250dp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
             android:queryHint="Serach"
             android:layout_marginTop="20dp"
             android:layout_centerHorizontal="true"
@@ -57,7 +58,29 @@
             android:layout_below="@+id/logo_layout"
             android:layout_height="40dp">
 
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="fdfsdfsfsdf"
+                android:textColor="@color/white"
+        />
     </SearchView>
+    <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Browse, earn points and recharge for free."
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/white"
+            android:shadowColor="@color/white"
+            android:shadowRadius="8"
+            android:gravity="bottom"
+            android:layout_gravity="bottom"
+            android:id="@+id/desc"
+            android:layout_below="@id/searchView"
+    />
 
 
 </RelativeLayout>
