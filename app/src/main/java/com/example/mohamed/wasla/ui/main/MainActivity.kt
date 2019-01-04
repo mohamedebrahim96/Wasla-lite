@@ -10,6 +10,7 @@ import android.view.View
 import android.graphics.Typeface
 import android.widget.SearchView
 import com.example.mohamed.wasla.R
+import com.example.mohamed.wasla.utils.MyAlertDialogFragment
 import com.example.mohamed.wasla.ui.webview.webviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -59,7 +60,12 @@ class MainActivity : AppCompatActivity() {
             }
 
         })
-
+        //DialogFragment
+        val fm = supportFragmentManager
+        val myAlertDialogFragment = MyAlertDialogFragment()
+        grid_button.setOnClickListener {
+            myAlertDialogFragment.show(fm, "PioneersFragment_tag")
+        }
     }
 
     fun setupContentWindow() {
@@ -70,4 +76,5 @@ class MainActivity : AppCompatActivity() {
         }
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
     }
+
 }
