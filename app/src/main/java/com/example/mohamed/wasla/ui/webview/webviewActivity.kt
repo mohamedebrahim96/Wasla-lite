@@ -20,7 +20,6 @@ class webviewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setupContentWindow()
         setContentView(R.layout.activity_webview)
-        val bold_wasla = Typeface.createFromAsset(assets, "fonts/bold-wasla.ttf")
         val medium_wasla = Typeface.createFromAsset(assets, "fonts/medium-wasla.ttf")
         var url: String = intent.getStringExtra("url")
         val webView = findViewById<View>(R.id.webview) as WebView
@@ -30,11 +29,14 @@ class webviewActivity : AppCompatActivity() {
             override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
                 view?.loadUrl(url)
                 toolbar_title.setText(url)
+                toolbar_title.setTypeface(medium_wasla)
                 return true
             }
         }
         webView.loadUrl(url)
         toolbar_title.setText(url)
+        toolbar_title.setTypeface(medium_wasla)
+
     }
 
     fun setupContentWindow() {
