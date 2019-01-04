@@ -13,12 +13,14 @@
             android:id="@+id/toolbar"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
+            android:gravity="start"
             android:minHeight="?attr/actionBarSize">
 
 
         <ImageView android:layout_width="26dp"
                    android:layout_height="26dp"
-                    android:src="@drawable/lock"
+                   android:src="@drawable/lock"
+
         />
         <TextView
                 android:layout_width="250dp"
@@ -27,14 +29,27 @@
                 android:textColor="@color/white"
                 android:ellipsize="end"
                 android:lines="1"
-                android:textSize="18sp"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15sp"
+                android:gravity="center"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title" />
 
     </android.support.v7.widget.Toolbar>
+    <ProgressBar
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/progress"
+            android:layout_marginTop="-7dp"
+            android:layout_marginBottom="-7dp"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal" />
     <WebView
             android:id="@+id/webview"
-            android:layout_below="@+id/toolbar"
+            android:layout_below="@+id/progress"
             android:layout_alignParentLeft="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
