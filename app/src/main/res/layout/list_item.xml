@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/lock"
+    />
+    <TextView
+            android:id="@+id/tv_animal_type"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:textSize="20sp"
+            android:padding="20dp"/>
+
+</LinearLayout>
