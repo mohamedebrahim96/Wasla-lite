@@ -16,13 +16,20 @@
             android:minHeight="?attr/actionBarSize">
 
 
+        <ImageView android:layout_width="26dp"
+                   android:layout_height="26dp"
+                    android:src="@drawable/lock"
+        />
         <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
-                android:text="Toolbar Title"
+                android:text="URL fsdfsdfffdsfsdfsdsdfsdfsdfsdffsdfsdfdsfsdfsdfsdf"
+                android:textColor="@color/white"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textSize="18sp"
                 android:layout_gravity="center"
                 android:id="@+id/toolbar_title" />
-
 
     </android.support.v7.widget.Toolbar>
     <WebView

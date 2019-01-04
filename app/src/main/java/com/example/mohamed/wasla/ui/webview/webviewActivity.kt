@@ -10,8 +10,8 @@ import android.view.WindowManager
 import com.example.mohamed.wasla.R
 import kotlinx.android.synthetic.main.activity_webview.*
 import android.webkit.WebView
-
-
+import android.webkit.WebViewClient
+import android.widget.Toast
 
 
 class webviewActivity : AppCompatActivity() {
@@ -24,9 +24,17 @@ class webviewActivity : AppCompatActivity() {
         val medium_wasla = Typeface.createFromAsset(assets, "fonts/medium-wasla.ttf")
         var url: String = intent.getStringExtra("url")
         val webView = findViewById<View>(R.id.webview) as WebView
-        webView.loadUrl("https://www.journaldev.com")
-
-
+        webView.getSettings().setJavaScriptEnabled(true)
+        webView.getSettings().setDomStorageEnabled(true)
+        webView!!.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                view?.loadUrl(url)
+                toolbar_title.setText(url)
+                return true
+            }
+        }
+        webView.loadUrl(url)
+        toolbar_title.setText(url)
     }
 
     fun setupContentWindow() {

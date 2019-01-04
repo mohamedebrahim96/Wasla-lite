@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             override fun onQueryTextSubmit(url: String): Boolean {
                 val intent = Intent(this@MainActivity,webviewActivity::class.java)
 
-                intent.putExtra("url", url)
+                intent.putExtra("url", "https://www.google.com/search?q="+url)
                 startActivity(intent)
                 return true
             }
