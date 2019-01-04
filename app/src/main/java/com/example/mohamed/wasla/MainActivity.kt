@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.WindowManager
 import android.os.Build
 import android.view.View
+import android.graphics.Typeface
+import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +16,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setupContentWindow()
         setContentView(R.layout.activity_main)
+        val bold_wasla = Typeface.createFromAsset(assets, "fonts/bold-wasla.ttf")
+        val medium_wasla = Typeface.createFromAsset(assets, "fonts/medium-wasla.ttf")
+
+        logo.setTypeface(bold_wasla)
+        logo_lite.setTypeface(medium_wasla)
 
     }
 
