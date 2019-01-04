@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity() {
         logo.setTypeface(bold_wasla)
         logo_lite.setTypeface(medium_wasla)
 
+        searchView.setQueryHint("Search or enter address");
+
     }
 
     fun setupContentWindow() {
