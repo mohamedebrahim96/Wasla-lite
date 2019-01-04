@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.view.WindowManager
 import com.example.mohamed.wasla.R
+import kotlinx.android.synthetic.main.activity_webview.*
+import android.webkit.WebView
 
 
 
@@ -20,7 +22,9 @@ class webviewActivity : AppCompatActivity() {
         setContentView(R.layout.activity_webview)
         val bold_wasla = Typeface.createFromAsset(assets, "fonts/bold-wasla.ttf")
         val medium_wasla = Typeface.createFromAsset(assets, "fonts/medium-wasla.ttf")
-
+        var url: String = intent.getStringExtra("url")
+        val webView = findViewById<View>(R.id.webview) as WebView
+        webView.loadUrl("https://www.journaldev.com")
 
 
     }

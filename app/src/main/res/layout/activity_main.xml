@@ -62,27 +62,23 @@
             android:layout_marginTop="20dp"
             android:clickable="true"
             android:layout_below="@+id/logo_layout">
+        <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:visibility="invisible"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_white_background"
+                android:layout_height="40dp">
+        </SearchView>
         <ImageView
                 android:id="@+id/searchView_background"
                 android:layout_width="match_parent"
                 android:queryHint="Serach"
+                android:visibility="visible"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/round_white_background"
                 android:layout_height="40dp"/>
-        <SearchView
-                android:id="@+id/searchView"
-                android:layout_width="match_parent"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-                android:queryHint="Serach"
-                android:visibility="gone"
-                android:layout_marginTop="20dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/round_white_background"
-                android:layout_height="40dp">
 
-
-        </SearchView>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

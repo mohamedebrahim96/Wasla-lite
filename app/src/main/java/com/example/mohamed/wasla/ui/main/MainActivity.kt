@@ -8,9 +8,12 @@ import android.view.WindowManager
 import android.os.Build
 import android.view.View
 import android.graphics.Typeface
+import android.widget.SearchView
 import com.example.mohamed.wasla.R
 import com.example.mohamed.wasla.ui.webview.webviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
+
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,12 +28,37 @@ class MainActivity : AppCompatActivity() {
         logo.setTypeface(bold_wasla)
         logo_lite.setTypeface(medium_wasla)
 
-        searchView.setQueryHint("Search or enter address")
         text_query.setTypeface(medium_wasla)
 
         searchView_layout.setOnClickListener {
-            startActivity(Intent(this@MainActivity, webviewActivity::class.java))
+            searchView_background.visibility = View.GONE
+            text_query.visibility = View.GONE
+            searchView.visibility = View.VISIBLE
+            searchView.setFocusable(true)
+            searchView.setIconified(false)
+            searchView.requestFocusFromTouch()
+
         }
+
+
+
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(url: String): Boolean {
+                val intent = Intent(this@MainActivity,webviewActivity::class.java)
+
+                intent.putExtra("url", url)
+                startActivity(intent)
+                return true
+            }
+
+            override fun onQueryTextChange(newText: String): Boolean {
+                return true
+            }
+
+            fun callSearch(query: String) {
+            }
+
+        })
 
     }
 

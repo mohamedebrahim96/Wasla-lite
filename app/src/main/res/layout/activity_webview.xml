@@ -3,25 +3,34 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         android:background="@drawable/gradient_background"
         android:fitsSystemWindows="true"
         tools:context=".ui.main.MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_height="wrap_content"
-            android:text="WaslaBrowser"
-            android:textSize="35sp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:layout_centerHorizontal="true"
-            android:shadowColor="@color/white"
-            android:shadowDx="0.0"
-            android:shadowDy="0.0"
-            android:shadowRadius="12"
-            android:id="@+id/logo"
-    />
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize">
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Toolbar Title"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+
+
+    </android.support.v7.widget.Toolbar>
+    <WebView
+            android:id="@+id/webview"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
 
 
