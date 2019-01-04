@@ -6,15 +6,22 @@
         android:layout_height="match_parent"
         android:background="@drawable/gradient_background"
         android:fitsSystemWindows="true"
-        tools:context=".MainActivity">
+        tools:context=".ui.main.MainActivity">
 
+    <Button android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            android:background="@drawable/grid_button"
+    />
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:orientation="horizontal"
             android:gravity="center"
             android:id="@+id/logo_layout"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="200dp"
             android:layout_centerHorizontal="true">
         <TextView
                 android:layout_width="wrap_content"
@@ -46,25 +53,48 @@
         />
     </LinearLayout>
 
-    <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="match_parent"
-            android:layout_marginRight="40dp"
-            android:layout_marginLeft="40dp"
-            android:queryHint="Serach"
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/searchView_layout"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/round_white_background"
-            android:layout_below="@+id/logo_layout"
-            android:layout_height="40dp">
+            android:clickable="true"
+            android:layout_below="@+id/logo_layout">
+        <ImageView
+                android:id="@+id/searchView_background"
+                android:layout_width="match_parent"
+                android:queryHint="Serach"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_white_background"
+                android:layout_height="40dp"/>
+        <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_marginRight="40dp"
+                android:layout_marginLeft="40dp"
+                android:queryHint="Serach"
+                android:visibility="gone"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_white_background"
+                android:layout_height="40dp">
 
+
+        </SearchView>
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="fdfsdfsfsdf"
+                android:text="Search or enter address"
                 android:textColor="@color/white"
+                android:id="@+id/text_query"
+                android:textSize="15sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
         />
-    </SearchView>
+    </RelativeLayout>
+
     <TextView
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -72,14 +102,14 @@
             android:textSize="15sp"
             android:textAlignment="center"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:textColor="@color/white"
             android:shadowColor="@color/white"
             android:shadowRadius="8"
             android:gravity="bottom"
             android:layout_gravity="bottom"
             android:id="@+id/desc"
-            android:layout_below="@id/searchView"
+            android:layout_below="@id/searchView_layout"
     />
 
 

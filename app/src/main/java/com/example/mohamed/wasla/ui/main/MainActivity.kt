@@ -1,5 +1,6 @@
-package com.example.mohamed.wasla
+package com.example.mohamed.wasla.ui.main
 
+import android.content.Intent
 import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +8,8 @@ import android.view.WindowManager
 import android.os.Build
 import android.view.View
 import android.graphics.Typeface
+import com.example.mohamed.wasla.R
+import com.example.mohamed.wasla.ui.webview.webviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -23,6 +26,11 @@ class MainActivity : AppCompatActivity() {
         logo_lite.setTypeface(medium_wasla)
 
         searchView.setQueryHint("Search or enter address")
+        text_query.setTypeface(medium_wasla)
+
+        searchView_layout.setOnClickListener {
+            startActivity(Intent(this@MainActivity, webviewActivity::class.java))
+        }
 
     }
 
