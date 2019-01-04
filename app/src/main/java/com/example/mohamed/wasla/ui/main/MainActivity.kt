@@ -10,7 +10,7 @@ import android.view.View
 import android.graphics.Typeface
 import android.widget.SearchView
 import com.example.mohamed.wasla.R
-import com.example.mohamed.wasla.ui.utils.MyAlertDialogFragment
+import com.example.mohamed.wasla.utils.MyAlertDialogFragment
 import com.example.mohamed.wasla.ui.webview.webviewActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
